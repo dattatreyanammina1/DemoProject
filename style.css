@@ -284,3 +284,43 @@ header {
     flex-basis: calc(50% - 20px); /* Adjust as needed */
     margin-bottom: 20px; /* Adjust spacing between review cards */
 }
+
+footer {
+    background-color: #01204E;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover,.social-media a:hover {
+    color: #f0c040;
+}
+
