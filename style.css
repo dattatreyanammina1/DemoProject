@@ -1,22 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* Media query for mobile phones */
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-}
+    /* Make images responsive */
+    img {
+        width: 100%;
+        height: auto;
+    }
 
-[class*="col-"] {
-  float: left;
-  padding: 15px;
+    /* Adjust headers */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    /* Adjust the header layout */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header .logo {
+        margin-bottom: 15px;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    header div {
+        margin-top: 15px;
+    }
+
+    /* Adjust navbar */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Adjust product grid layout */
+    .product-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust reviews layout */
+    .reviews-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust footer layout */
+    footer {
+        text-align: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-links a {
+        margin: 5px 0;
+    }
 }
 
 * {
     text-decoration: none;
-    padding: 0;
-    margin: 0;
     font-family: "Poppins", sans-serif;
+    padding: 0%;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -47,6 +140,7 @@ header {
 .navbar {
     display: flex;
     gap: 20px;
+    position: relative;
 }
 
 .navbar .a1 {
@@ -65,14 +159,13 @@ header {
     cursor: pointer;
     border: 5px solid #01204E;
     border-radius: 20px;
-    animation-name: inherit;
 }
 
-.a1{
+.a1 {
     transition: .2s;
 }
 
-.a1:hover{
+.a1:hover {
     transform: scale(1.5);
 }
 
@@ -89,7 +182,8 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 80px; /* Adjusted padding to account for fixed header */
+    padding-top: 80px;
+    /* Adjusted padding to account for fixed header */
     text-align: center;
 }
 
@@ -105,23 +199,32 @@ header {
     overflow: hidden;
     text-align: center;
     padding-top: 8px;
-    align-items: center;
+    padding-bottom: 30px;
 }
 
 .h::after {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%; /* Initially, text is positioned outside the container */
+    left: -100%;
+    /* Initially, text is positioned outside the container */
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0), #f9f9f9 50%);
-    animation: slideText 5s linear infinite; /* Adjust duration and timing function as needed */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #f9f9f9 50%);
+    animation: slideText 5s linear infinite;
+    /* Adjust duration and timing function as needed */
 }
 
 @keyframes slideText {
-    0% { left: -100%; }
-    100% { left: 100%; } /* Text moves to the right edge of its container */
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+
+    /* Text moves to the right edge of its container */
 }
 
 .dropdown {
@@ -144,7 +247,7 @@ header {
     text-align: left;
 }
 
-.a2:hover{
+.a2:hover {
     border: 10px solid aquamarine;
 }
 
@@ -152,12 +255,20 @@ header {
     display: block;
 }
 
-.about-page{
-    padding: 130px 80px;
+.about-page {
+    padding: 50px;
     text-align: center;
+    margin-top: 110px;
+    border: 15px solid #58111A;
 }
 
-.product-listing-page, .reviews-page, .categories-page {
+#u {
+    text-decoration: underline;
+}
+
+.product-listing-page,
+.reviews-page,
+.categories-page {
     padding: 80px 80px;
     text-align: center;
 }
@@ -209,7 +320,8 @@ header {
     background-color: #4cae4c;
 }
 
-.review-card, .category-card {
+.review-card,
+.category-card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -246,13 +358,17 @@ header {
 }
 
 @media (max-width: 768px) {
-    .product-card, .category-card {
+
+    .product-card,
+    .category-card {
         width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 480px) {
-    .product-card, .category-card {
+
+    .product-card,
+    .category-card {
         width: 100%;
     }
 
@@ -281,8 +397,10 @@ header {
 }
 
 .review-card {
-    flex-basis: calc(50% - 20px); /* Adjust as needed */
-    margin-bottom: 20px; /* Adjust spacing between review cards */
+    flex-basis: calc(50% - 20px);
+    /* Adjust as needed */
+    margin-bottom: 20px;
+    /* Adjust spacing between review cards */
 }
 
 footer {
@@ -320,7 +438,7 @@ footer {
     font-size: 14px;
 }
 
-.footer-links a:hover,.social-media a:hover {
+.footer-links a:hover,
+.social-media a:hover {
     color: #f0c040;
 }
-
