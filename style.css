@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* Media query for mobile phones */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1650px) {
     /* Make images responsive */
-    header{
-        width: 100%;
-        height: auto;
+    .navbar{
+        width: width;
+        height: height;
     }
 
-    img {
-        width: 100%;
-        height: auto;
+    .img1 {
+        width: width;
+        height: height;
     }
 
 }
