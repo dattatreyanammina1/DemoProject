@@ -3,106 +3,16 @@
 /* Media query for mobile phones */
 @media only screen and (max-width: 768px) {
     /* Make images responsive */
+    header{
+        width: 100%;
+        height: auto;
+    }
+
     img {
         width: 100%;
         height: auto;
     }
 
-    /* Adjust headers */
-    h1 {
-        font-size: 24px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-
-    /* Adjust the header layout */
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    header .logo {
-        margin-bottom: 15px;
-    }
-
-    header nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    header nav a {
-        margin: 5px 0;
-    }
-
-    header div {
-        margin-top: 15px;
-    }
-
-    /* Adjust navbar */
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar a {
-        display: block;
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Adjust product grid layout */
-    .product-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    /* Adjust reviews layout */
-    .reviews-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .review-card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    /* Adjust footer layout */
-    footer {
-        text-align: center;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .footer-links a {
-        margin: 5px 0;
-    }
 }
 
 * {
