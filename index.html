@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Mart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo"><i class="fa-solid fa-store"></i> <span style="color: #01204E; font-weight: bolder;">Grocery Mart</span> </a>
+        <nav class="navbar">
+            <a class="a1" href="#home">home</a>
+            <a class="a1" href="#about">about</a>
+            <a class="a1" href="#products">products</a>
+            <a class="a1" href="#reviews">reviews</a>
+            <div class="dropdown a1">
+                <button class="dropbtn">Categories <i class="fas fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a class="a2" href="#fruits" onclick="showCategory('fruits')">Fruits</a>
+                    <a class="a2" href="#vegetables" onclick="showCategory('vegetables')">Vegetables</a>
+                    <!-- Add more categories here -->
+                </div>
+            </div>           
+        </nav>
+
+        <div>
+            <button class="btn"><a href="login.html">Login</a></button>
+            <button class="btn"><a href="register.html">Register</a></button>
+        </div>
+    </header>
+
+    <div id="home" class="images-container">
+        <img src="img.jpg" alt="Image 1" class="img1">
+    </div>
+
+    <h2 class="h" style="font-size: 30px;">"Elevate your health, one fresh bite at a time.<br> Discover the power of fruits and vegetables with every meal."</h2>
+    
+    <div id="about" class="about-page">
+        <h1><u>About Us</u></h1><br>
+        <h3>Welcome to Grocery Mart! We are dedicated to providing you with the freshest produce and highest quality grocery items.<br> Our mission is to make healthy eating accessible and convenient for everyone.</h3>
+    </div>
+    
+
+    <section id="products" class="product-listing-page">
+        <br><h1>Our Products</h1><br>
+        <div class="product-category">
+            <button onclick="showCategory('fruits')" class="button-primary">Fruits</button>
+            <button onclick="showCategory('vegetables')" class="button-primary">Vegetables</button>
+        </div>
+        <br>
+        <div class="product-grid" id="fruits" data-category="fruits" style="display: none;">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixid=M3wxMzcxOTN8MHwxfHNlYXJjaHwzfHxhcHBsZXN8ZW58MHx8fHwxNzA5ODM4ODA4fDA&ixlib=rb-4.0.3&fm=jpg&w=8256&h=5504&fit=max" alt="Product 1">
+                <h2>Apple</h2>
+                <p>$2.00</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/41Y2eoT3OTL.jpg" alt="Product 2">
+                <h2>Banana</h2>
+                <p>$1.50</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2020/12/QZ/EM/OJ/119047533/nashik-capsule-grapes-500x500.jpg" alt="Product 6">
+                <h2>Grapes</h2>
+                <p>$2.80</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsa3K1PkfEgVzc6JeayE-uGwejpsBDBbVBUw&s" alt="Product 9">
+                <h2>Orange</h2>
+                <p>$1.80</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://healthyfamilyproject.com/wp-content/uploads/2020/05/Strawberries-background.jpg" alt="Product 10">
+                <h2>Strawberry</h2>
+                <p>$4.00</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/51jk5Ao6NIL._AC_UF1000,1000_QL80_.jpg" alt="Product 11">
+                <h2>Blueberry</h2>
+                <p>$3.50</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 7 -->
+            <div class="product-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Persea_americana_fruit_2.JPG" alt="Product 12">
+                <h2>Avocado</h2>
+                <p>$2.20</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 8 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/618flJ0XILL._AC_UF1000,1000_QL80_.jpg" alt="Product 13">
+                <h2>Cherry</h2>
+                <p>$4.50</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 9 -->
+            <div class="product-card">
+                <img src="https://static.toiimg.com/thumb/msid-109932142,width-1280,height-720,resizemode-4/109932142.jpg" alt="Product 14">
+                <h2>Watermelon</h2>
+                <p>$3.80</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 10 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrE1p9xNBXToyhlx53v1Mx7wlaFKkbS4z0-A&s" alt="Product 15">
+                <h2>Kiwi</h2>
+                <p>$1.60</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-grid" id="vegetables" data-category="vegetables" style="display: none;">
+            <!-- Product 11 -->
+            <div class="product-card">
+                <img src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" alt="Product 3">
+                <h2>Carrot</h2>
+                <p>$1.00</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 12 -->
+            <div class="product-card">
+                <img src="https://www.allthatgrows.in/cdn/shop/products/Cherry-Tomato.jpg?v=1598080165" alt="Product 4">
+                <h2>Tomato</h2>
+                <p>$2.50</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 13 -->
+            <div class="product-card">
+                <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5390/h1218g16207258089583.jpg" alt="Product 5">
+                <h2>Broccoli</h2>
+                <p>$3.00</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 14 -->
+            <div class="product-card">
+                <img src="https://images.moneycontrol.com/static-mcnews/2023/07/Health-benefits-of-spinach.jpg?impolicy=website&width=1600&height=900" alt="Product 7">
+                <h2>Spinach</h2>
+                <p>$1.20</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+            <!-- Product 15 -->
+            <div class="product-card">
+                <img src="https://www.jiomart.com/images/product/original/590000090/potato-1-kg-product-images-o590000090-p590000090-0-202207291750.jpg?im=Resize=(420,420)" alt="Product 8">
+                <h2>Potato</h2>
+                <p>$0.90</p>
+                <button class="button-primary">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews-page">
+        <br><h1>Customer Reviews</h1><br>
+        <div class="reviews-container">
+            <div class="review-card">
+                <h2>John Doe</h2>
+                <p>★★★★☆</p>
+                <p>Great service and fresh products! Will definitely shop here again.</p>
+            </div>
+            <div class="review-card">
+                <h2>Jane Smith</h2>
+                <p>★★★★★</p>
+                <p>The best grocery store in town! High quality and friendly staff.</p>
+            </div>
+            <div class="review-card">
+                <h2>Emily Johnson</h2>
+                <p>★★★★☆</p>
+                <p>Love the variety and freshness of the products. Highly recommend!</p>
+            </div>
+            <div class="review-card">
+                <h2>Michael Brown</h2>
+                <p>★★★★☆</p>
+                <p>Good prices and excellent customer service. I'll be back for sure.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
