@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #7cce2f;
+    padding: 1rem 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #01204E;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .a1 {
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.btn {
+    background-color: #8000ff;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border: 5px solid #01204E;
+    border-radius: 20px;
+    animation-name: inherit;
+}
+
+.a1{
+    transition: .2s;
+}
+
+.a1:hover{
+    transform: scale(1.5);
+}
+
+.btn a {
+    color: white;
+}
+
+.btn:hover {
+    background-color: #39b839;
+}
+
+.d1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 80px; /* Adjusted padding to account for fixed header */
+    text-align: center;
+}
+
+.img1 {
+    padding-top: 78px;
+    width: 1380px;
+    position: relative;
+    height: 570px;
+}
+
+.h {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-top: 8px;
+    align-items: center;
+}
+
+.h::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Initially, text is positioned outside the container */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), #f9f9f9 50%);
+    animation: slideText 5s linear infinite; /* Adjust duration and timing function as needed */
+}
+
+@keyframes slideText {
+    0% { left: -100%; }
+    100% { left: 100%; } /* Text moves to the right edge of its container */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.a2:hover{
+    border: 10px solid aquamarine;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.about-page{
+    padding: 130px 80px;
+    text-align: center;
+}
+
+.product-listing-page, .reviews-page, .categories-page {
+    padding: 80px 80px;
+    text-align: center;
+}
+
+.product-grid {
+    display: inline;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #777;
+}
+
+.button-primary {
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+}
+
+.button-primary:hover {
+    background-color: #4cae4c;
+}
+
+.review-card, .category-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-page .review-card h2 {
+    margin-bottom: 10px;
+}
+
+.reviews-page .review-card p {
+    margin: 5px 0;
+}
+
+.categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .product-card, .category-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card, .category-card {
+        width: 100%;
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.product-grid {
+    transition: opacity 0.3s ease;
+}
+
+.product-grid[data-category] {
+    display: none;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.review-card {
+    flex-basis: calc(50% - 20px); /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust spacing between review cards */
+}
