@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
-    $sql = "INSERT INTO register VALUES ($email, $username, $password)";
+    $sql = "INSERT INTO register (email, username, password) VALUES ($email, $username, $password)";
 
     if ($conn->query($sql) === TRUE) {
         $message = "You're Registered successfully!";
