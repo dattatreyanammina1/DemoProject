@@ -398,6 +398,11 @@ header {
         width: 100%;
     }
 
+    .img1 .navbar{
+        width: 76.56mm;
+        height: 169.59mm;
+    }
+
     header {
         padding: 1rem 2rem;
     }
