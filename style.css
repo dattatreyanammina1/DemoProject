@@ -2,14 +2,9 @@
 
 @media only screen and (max-width: 1650px) {
 
-    .navbar {
-        width: width;
-        height: height;
-    }
-
-    .img1 {
-        width: width;
-        height: height;
+    .img1 .navbar{
+        width: 76.56mm;
+        height: 169.59mm;
     }
 
 }
