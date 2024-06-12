@@ -25,7 +25,6 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f9f9f9;
-    padding-top: 80px;
 }
 
 header {
@@ -205,6 +204,7 @@ header {
 }
 
 .img1 {
+    padding-top: 78px;
     width: 1300px;
     align-items: center;
     padding-left: 100px;
@@ -216,7 +216,8 @@ header {
     overflow: hidden;
     text-align: center;
     padding-top: 8px;
-    margin-bottom: 290px;
+    margin: 10px;
+    padding-bottom: 30px;
 }
 
 .h::after {
@@ -289,7 +290,6 @@ header {
     padding: 50px;
     text-align: center;
     border: 15px solid #58111A;
-    margin-top: -70px;
 }
 
 #u {
