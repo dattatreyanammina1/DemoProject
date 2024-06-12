@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* Media query for mobile phones */
 @media only screen and (max-width: 1650px) {
-    /* Make images responsive */
-    .navbar{
+
+    .navbar {
         width: width;
         height: height;
     }
@@ -26,11 +25,12 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f9f9f9;
+    padding-top: 100px;
 }
 
 header {
     background-color: #7cce2f;
-    padding: 1rem 8rem;
+    padding: 1rem 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,12 +49,16 @@ header {
 
 .navbar {
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    padding-left: 5px;
+    width: 500px;
+    height: 19.64px;
     position: relative;
 }
 
 .navbar .a1 {
     color: white;
+    align-items: center;
     font-weight: bold;
     text-transform: capitalize;
 }
@@ -69,6 +73,110 @@ header {
     cursor: pointer;
     border: 5px solid #01204E;
     border-radius: 20px;
+}
+
+.cart-icon {
+    display: inline;
+    padding-left: 10px;
+    cursor: pointer;
+    align-items: center;
+}
+
+#cart-count {
+    position: absolute;
+    display: inline;
+    top: 16px;
+    padding-right: 39px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+#cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    transform: translateX(100%);
+}
+
+#cart h2 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#cart ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    max-height: 70%;
+    overflow-y: auto;
+}
+
+#cart ul li {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#cart p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.cart-hidden {
+    transform: translateX(100%);
+}
+
+.cart-visible {
+    transform: translateX(0);
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items li span {
+    flex: 1;
+}
+
+#cart-total {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.product-card button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #218838;
 }
 
 .a1 {
@@ -93,14 +201,14 @@ header {
     justify-content: center;
     flex-direction: column;
     padding-top: 80px;
-    /* Adjusted padding to account for fixed header */
     text-align: center;
 }
 
 .img1 {
     padding-top: 78px;
-    width: 1380px;
-    position: relative;
+    width: 1300px;
+    align-items: center;
+    padding-left: 100px;
     height: 570px;
 }
 
@@ -109,7 +217,7 @@ header {
     overflow: hidden;
     text-align: center;
     padding-top: 8px;
-    padding-bottom: 30px;
+    margin-bottom: 290px;
 }
 
 .h::after {
@@ -117,12 +225,10 @@ header {
     position: absolute;
     top: 0;
     left: -100%;
-    /* Initially, text is positioned outside the container */
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #f9f9f9 50%);
     animation: slideText 5s linear infinite;
-    /* Adjust duration and timing function as needed */
 }
 
 @keyframes slideText {
@@ -133,8 +239,18 @@ header {
     100% {
         left: 100%;
     }
+}
 
-    /* Text moves to the right edge of its container */
+.dropbtn{
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: #7cce2f;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline;
+    border: 0;
+    margin: 0;
 }
 
 .dropdown {
@@ -145,20 +261,25 @@ header {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
     min-width: 160px;
-    z-index: 1;
+    z-index: 0;
 }
 
 .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     display: block;
     text-align: left;
 }
 
+.a2{
+    background-color: #01204E;
+}
+
 .a2:hover {
-    border: 10px solid aquamarine;
+    border: 8px solid aquamarine;
+    padding: 5px;
+    box-shadow: inset 5px solid black;
 }
 
 .dropdown:hover .dropdown-content {
@@ -168,8 +289,8 @@ header {
 .about-page {
     padding: 50px;
     text-align: center;
-    margin-top: 110px;
     border: 15px solid #58111A;
+    margin-top: -70px;
 }
 
 #u {
@@ -181,6 +302,7 @@ header {
 .categories-page {
     padding: 80px 80px;
     text-align: center;
+    margin-top: 70px;
 }
 
 .product-grid {
@@ -308,9 +430,7 @@ header {
 
 .review-card {
     flex-basis: calc(50% - 20px);
-    /* Adjust as needed */
     margin-bottom: 20px;
-    /* Adjust spacing between review cards */
 }
 
 footer {
@@ -351,4 +471,57 @@ footer {
 .footer-links a:hover,
 .social-media a:hover {
     color: #f0c040;
+}
+
+h2 {
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    align-items: center;
+    padding: 0 150px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#contactus{
+    position: relative;
+    margin-top: 70px;
 }
