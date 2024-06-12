@@ -403,12 +403,10 @@ header {
         height: 169.59mm;
     }
 
-    header {
-        padding: 1rem 2rem;
-    }
+    
 
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 }
