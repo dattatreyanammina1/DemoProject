@@ -25,7 +25,7 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f9f9f9;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 header {
@@ -205,7 +205,6 @@ header {
 }
 
 .img1 {
-    padding-top: 78px;
     width: 1300px;
     align-items: center;
     padding-left: 100px;
