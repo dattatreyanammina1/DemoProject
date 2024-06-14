@@ -483,7 +483,6 @@ input[type="submit"]:hover {
     }
 
     .navbar {
-        flex-direction: column;
         gap: 15px;
         width: auto;
     }
