@@ -1,61 +1,43 @@
-/* Add this CSS to login.css */
 body {
-    font-family: 'Libre Baskerville', serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
-.login-page {
+.container {
     max-width: 400px;
-    width: 100%;
+    margin: 50px auto;
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-page h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.login-page form {
+form {
     display: flex;
     flex-direction: column;
 }
 
-.login-page label {
-    font-size: 16px;
-    margin-bottom: 8px;
-    text-align: left;
+label {
+    margin-bottom: 5px;
 }
 
-.login-page input {
+input[type="text"],
+input[type="password"],
+button {
+    margin-bottom: 10px;
     padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
     font-size: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
-.login-page .btn {
-    background-color: #5cb85c;
-    border: none;
+button {
+    background-color: #4CAF50;
     color: white;
-    padding: 10px;
-    font-size: 16px;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.login-page .btn:hover {
-    background-color: #4cae4c;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+button:hover {
+    background-color: #45a049;
 }
