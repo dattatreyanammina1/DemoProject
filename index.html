@@ -17,7 +17,6 @@
                 style="color: #01204E; font-weight: bolder;">Grocery Mart</span> </a>
         <nav class="navbar">
             <a class="a1" href="#home">home</a>
-            <a class="a1" href="#about">about</a>
             <a class="a1" href="#products">products</a>
             <a class="a1" href="#reviews">reviews</a>
             <a class="a1" href="#contact">contact</a>
@@ -31,20 +30,17 @@
                     <a class="a2" href="#beverages" onclick="showCategory('beverages')">Beverages</a>
                 </div>
             </div>
+            <button class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
 
             <button class="btn"><a href="register.html">Register</a></button>
 
             <div class="cart-icon" onclick="toggleCart()">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <div id="cart-count">0</div>
+                <a href="checkout_page.html" ><i class="fa-solid fa-cart-shopping"></i></a>
             </div>
     </header>
-    
-        <div id="cart" class="cart-visible">
-            <ul id="cart-items"></ul>
-            <p id="cart-total">Total: $0</p>
-        </div>
 
     <img src="11.jpg" id="home" alt="Image 1" class="img1">
 
@@ -376,7 +372,6 @@
             </div>
             <div class="footer-links">
                 <a href="#home">Home</a>
-                <a href="#about">About</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#fruits">Fruits</a>
                 <a href="#vegetables">Vegetables</a>
