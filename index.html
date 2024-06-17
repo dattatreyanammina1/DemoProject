@@ -21,7 +21,7 @@
             <a class="a1" href="#products">products</a>
             <a class="a1" href="#reviews">reviews</a>
             <a class="a1" href="#contact">contact</a>
-            <div class="dropdown a1">
+            <div class="dropdown">
                 <button class="dropbtn">Categories <i class="fas fa-caret-down"></i></button>
                 <div class="dropdown-content">
                     <a class="a2" href="#fruits" onclick="showCategory('fruits')">Fruits</a>
@@ -33,31 +33,23 @@
             </div>
         </nav>
 
-            <button class="btn"><a href="register.html">Register</a></button>
+            <button class="btn"><a href="register.php">Register</a></button>
 
-            <div class="cart-icon">
+            <div class="cart-icon" onclick="toggleCart()">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span id="cart-count">0</span>
+                <div id="cart-count">0</div>
             </div>
-        
-        <section id="cart" class="cart-total">
-            <ul id="cart-items"></ul>
-            <p id="cart-total">Total: $0.00</p>
-        </section>
-
     </header>
+    
+        <div id="cart" class="cart-visible">
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: $0</p>
+        </div>
 
-    <img src="img.jpg" id="home" alt="Image 1" class="img1">
+    <img src="11.jpg" id="home" alt="Image 1" class="img1">
 
-    <h4 class="h" style="font-size: 30px;">"Elevate your health, one fresh bite at a time.<br> Discover the power of
+    <h4 class="h" style="font-size: 25px;">"Elevate your health, one fresh bite at a time. Discover the power of
         fruits and vegetables with every meal."</h4>
-
-    <div id="about" class="about-page">
-        <h3><u id="u">About Us</u></h3><br>
-        <h5>Welcome to Grocery Mart! We are dedicated to providing you with the freshest produce and highest quality
-            grocery items.<br> Our mission is to make healthy eating accessible and convenient for everyone.</h5>
-    </div>
-
 
     <section id="products" class="product-listing-page">
         <br>
@@ -77,7 +69,7 @@
                     alt="Product 1">
                 <h2>Apple - 1Kg</h2>
                 <p>₹100.0</p>
-                <button onclick="addToCart('Apple', 100.00)"  class="button-primary add-to-cart-btn">Add to Cart</button>
+                <button class="button-primary add-to-cart-btn">Add to Cart</button>
             </div>
             <!-- Product 2 -->
             <div class="product-card">
@@ -88,7 +80,7 @@
             </div>
             <!-- Product 3 -->
             <div class="product-card">
-                <img src="https://5.imimg.com/data5/SELLER/Default/2020/12/QZ/EM/OJ/119047533/nashik-capsule-grapes-500x500.jpg"
+                <img src="https://smartyield.in/wp-content/uploads/2021/06/Green-grape.png"
                     alt="Product 6">
                 <h2>Grapes - 500g</h2>
                 <p>₹35.0</p>
@@ -96,7 +88,7 @@
             </div>
             <!-- Product 4 -->
             <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsa3K1PkfEgVzc6JeayE-uGwejpsBDBbVBUw&s"
+                <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/272/272782/oranges-in-a-box.jpg"
                     alt="Product 9">
                 <h2>Orange - 1Kg</h2>
                 <p>₹75.0</p>
@@ -104,7 +96,7 @@
             </div>
             <!-- Product 5 -->
             <div class="product-card">
-                <img src="https://healthyfamilyproject.com/wp-content/uploads/2020/05/Strawberries-background.jpg"
+                <img src="https://m.media-amazon.com/images/I/61hVLTBkByL._AC_UF894,1000_QL80_.jpg"
                     alt="Product 10">
                 <h2>Strawberry - 250g</h2>
                 <p>₹150.0</p>
@@ -112,14 +104,14 @@
             </div>
             <!-- Product 6 -->
             <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/51jk5Ao6NIL._AC_UF1000,1000_QL80_.jpg" alt="Product 11">
+                <img src="https://seedlefarms.com/wp-content/uploads/2021/04/Blueberries-2.png" alt="Product 11">
                 <h2>Blueberry - 250g</h2>
-                <p>₹170.0</p>
+                <p>₹170.0</p><br>
                 <button class="button-primary add-to-cart-btn">Add to Cart</button>
             </div>
             <!-- Product 7 -->
             <div class="product-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Persea_americana_fruit_2.JPG"
+                <img src="https://cdn.pixabay.com/photo/2021/04/14/17/45/avocado-6179050_640.jpg"
                     alt="Product 12">
                 <h2>Avocado - 500g</h2>
                 <p>₹120.0</p>
@@ -127,7 +119,7 @@
             </div>
             <!-- Product 8 -->
             <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/618flJ0XILL._AC_UF1000,1000_QL80_.jpg" alt="Product 13">
+                <img src="https://static01.nyt.com/images/2014/06/22/magazine/mag-22Eat-Interactive-1402954377492/mag-22Eat-Interactive-1402954377492-superJumbo.jpg" alt="Product 13">
                 <h2>Cherry - 100g</h2>
                 <p>₹75.0</p>
                 <button class="button-primary add-to-cart-btn">Add to Cart</button>
@@ -142,7 +134,7 @@
             </div>
             <!-- Product 10 -->
             <div class="product-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrE1p9xNBXToyhlx53v1Mx7wlaFKkbS4z0-A&s"
+                <img src="https://cdn.britannica.com/45/126445-050-4C0FA9F6/Kiwi-fruit.jpg"
                     alt="Product 15">
                 <h2>Kiwi - 200g</h2>
                 <p>₹160.0</p>
@@ -348,8 +340,8 @@
         </div>
     </section>
 
-    <div id="contactus">
-        <br><br><br><h2 style="text-align: center;">Contact Us</h2>
+    <div id="contactus" class="contactus">
+        <br><br><br><h2 class="h1">Contact Us</h2><br><br>
         <form action="contact.php" id="contact" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
