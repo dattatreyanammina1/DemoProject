@@ -4,380 +4,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Mart</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Buying Reviews</title>
+    <link rel="icon" type="image" href="logo_small.svg">
+    <script src="https://kit.fontawesome.com/7d681e4b06.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <a class="logo"><i class="fa-solid fa-store"></i> <span
-                style="color: #01204E; font-weight: bolder;">Grocery Mart</span> </a>
-        <nav class="navbar">
-            <a class="a1" href="#home">home</a>
-            <a class="a1" href="#products">products</a>
-            <a class="a1" href="#reviews">reviews</a>
-            <a class="a1" href="#contact">contact</a>
-            <div class="dropdown">
-                <button class="dropbtn">Categories <i class="fas fa-caret-down"></i></button>
-                <div class="dropdown-content">
-                    <a class="a2" href="#fruits" onclick="showCategory('fruits')">Fruits</a>
-                    <a class="a2" href="#vegetables" onclick="showCategory('vegetables')">Vegetables</a>
-                    <a class="a2" href="#namkeen" onclick="showCategory('namkeen')">Namkeen</a>
-                    <a class="a2" href="#dairy" onclick="showCategory('dairy')">Dairy</a>
-                    <a class="a2" href="#beverages" onclick="showCategory('beverages')">Beverages</a>
-                </div>
-            </div>
-            
+        <nav class="nav">
+            <img src="logo_small.svg" alt="logo" class="img1">
+            <button class="login" style="font-weight: 700; font-family: 'Public Sans';">LOGIN</button>
         </nav>
-
-            <button class="btn"><a href="register.html">Register</a></button>
-
-            <div class="cart-icon" onclick="toggleCart()">
-                <a href="checkout_page.html" ><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
     </header>
 
-    <img src="11.jpg" id="home" alt="Image 1" class="img1">
-
-    <h4 class="h" style="font-size: 25px;">"Elevate your health, one fresh bite at a time. Discover the power of
-        fruits and vegetables with every meal."</h4>
-
-    <section id="products" class="product-listing-page">
-        <br>
-        <h1>Our Products</h1><br>
-        <div class="product-category">
-            <button onclick="showCategory('fruits')" class="button-primary">Fruits</button>
-            <button onclick="showCategory('vegetables')" class="button-primary">Vegetables</button>
-            <button onclick="showCategory('namkeen')" class="button-primary">Namkeen</button>
-            <button onclick="showCategory('dairy')" class="button-primary">Dairy</button>
-            <button onclick="showCategory('beverages')" class="button-primary">Beverages</button>
-        </div>
-        <br>
-        <div class="product-grid" id="fruits" data-category="fruits" style="display: none;">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?ixid=M3wxMzcxOTN8MHwxfHNlYXJjaHwzfHxhcHBsZXN8ZW58MHx8fHwxNzA5ODM4ODA4fDA&ixlib=rb-4.0.3&fm=jpg&w=8256&h=5504&fit=max"
-                    alt="Product 1">
-                <h2>Apple - 1Kg</h2>
-                <p>₹100.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/41Y2eoT3OTL.jpg" alt="Product 2">
-                <h2>Banana - 500g</h2>
-                <p>₹40.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://smartyield.in/wp-content/uploads/2021/06/Green-grape.png"
-                    alt="Product 6">
-                <h2>Grapes - 500g</h2>
-                <p>₹35.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 4 -->
-            <div class="product-card">
-                <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/272/272782/oranges-in-a-box.jpg"
-                    alt="Product 9">
-                <h2>Orange - 1Kg</h2>
-                <p>₹75.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 5 -->
-            <div class="product-card">
-                <img src="https://m.media-amazon.com/images/I/61hVLTBkByL._AC_UF894,1000_QL80_.jpg"
-                    alt="Product 10">
-                <h2>Strawberry - 250g</h2>
-                <p>₹150.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 6 -->
-            <div class="product-card">
-                <img src="https://seedlefarms.com/wp-content/uploads/2021/04/Blueberries-2.png" alt="Product 11">
-                <h2>Blueberry - 250g</h2>
-                <p>₹170.0</p><br>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 7 -->
-            <div class="product-card">
-                <img src="https://cdn.pixabay.com/photo/2021/04/14/17/45/avocado-6179050_640.jpg"
-                    alt="Product 12">
-                <h2>Avocado - 500g</h2>
-                <p>₹120.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 8 -->
-            <div class="product-card">
-                <img src="https://static01.nyt.com/images/2014/06/22/magazine/mag-22Eat-Interactive-1402954377492/mag-22Eat-Interactive-1402954377492-superJumbo.jpg" alt="Product 13">
-                <h2>Cherry - 100g</h2>
-                <p>₹75.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 9 -->
-            <div class="product-card">
-                <img src="https://static.toiimg.com/thumb/msid-109932142,width-1280,height-720,resizemode-4/109932142.jpg"
-                    alt="Product 14">
-                <h2>Watermelon - 1(Piece)</h2>
-                <p>₹75.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 10 -->
-            <div class="product-card">
-                <img src="https://cdn.britannica.com/45/126445-050-4C0FA9F6/Kiwi-fruit.jpg"
-                    alt="Product 15">
-                <h2>Kiwi - 200g</h2>
-                <p>₹160.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
+    <main class="banner">
+        <div class="banner-left">
+            <div class="flex-col">
+                <h1 class="h1"><span class="s1">Every</span><br><span class="s2">Reviews</span><br><span
+                        class="s3">Matters</span>
+                </h1>
+                <p class="p1">Welcome to BuyReviews where reviews have a soul,we believe in the power of authentic
+                    feedback. We provide
+                    humanised reviews for your Business. We make every review count because each review has its story.
+                </p>
             </div>
         </div>
 
-        <div class="product-grid" id="vegetables" data-category="vegetables" style="display: none;">
-            <!-- Product 11 -->
-            <div class="product-card">
-                <img src="https://i.ndtvimg.com/mt/cooks/2014-11/carrots.jpg" alt="Product 3">
-                <h2>Carrot - 200g</h2>
-                <p>₹20.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 12 -->
-            <div class="product-card">
-                <img src="https://www.allthatgrows.in/cdn/shop/products/Cherry-Tomato.jpg?v=1598080165" alt="Product 4">
-                <h2>Tomato - 500g</h2>
-                <p>₹50.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 13 -->
-            <div class="product-card">
-                <img src="https://domf5oio6qrcr.cloudfront.net/medialibrary/5390/h1218g16207258089583.jpg"
-                    alt="Product 5">
-                <h2>Broccoli - 250g</h2>
-                <p>₹40.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 14 -->
-            <div class="product-card">
-                <img src="https://images.moneycontrol.com/static-mcnews/2023/07/Health-benefits-of-spinach.jpg?impolicy=website&width=1600&height=900"
-                    alt="Product 7">
-                <h2>Spinach - 300g</h2>
-                <p>₹60.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 15 -->
-            <div class="product-card">
-                <img src="https://www.jiomart.com/images/product/original/590000090/potato-1-kg-product-images-o590000090-p590000090-0-202207291750.jpg?im=Resize=(420,420)"
-                    alt="Product 8">
-                <h2>Potato - 1Kg</h2>
-                <p>₹65.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
+        <div class="banner-right">
+            <lottie-player src="https://lottie.host/6d8a91a7-2c1a-4354-814f-d835b0dcb4f6/HdS8ahjTx4.json"
+                background="transparent" style="width: 40vw; padding-right: 150px; padding-top: 0px;" speed="1" loop
+                autoplay></lottie-player>
         </div>
 
-        <div class="product-grid" id="namkeen" data-category="namkeen" style="display: none;">
-            <!-- Product 16 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1202575_1-haldirams-namkeen-bhujia-sev.jpg?tr=w-1920,q=80"
-                    alt="Product 16">
-                <h2>Bhujia Sev - Medimum</h2>
-                <p>₹45.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 17 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/40197801_8-britannia-marie-gold-biscuits.jpg?tr=w-1080,q=80"
-                    alt="Product 17">
-                <h2>Marie Gold - 1</h2>
-                <p>₹15.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 18 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/40203379_3-britannia-good-day-cashew-cookies.jpg?tr=w-1080,q=80"
-                    alt="Product 18">
-                <h2>Good Day - 1</h2>
-                <p>₹10.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 19 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1203907_6-britannia-bourbon-cream-biscuit-chocolate-flavor.jpg?tr=w-1080,q=80"
-                    alt="Product 19">
-                <h2>Bourbon - 1</h2>
-                <p>₹10.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 20 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/40235654_7-sunfeast-dark-fantasy-choco-fills-cookie-original-crunchy-creamy.jpg?tr=w-1080,q=80"
-                    alt="Product 20">
-                <h2>Dark Fantasy - 1</h2>
-                <p>₹20.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-        </div>
+    </main>
 
-        <div class="product-grid" id="dairy" data-category="dairy" style="display: none;">
-            <!-- Product 21 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1202759_3-amul-butter-pasteurized.jpg?tr=w-1200,q=80"
-                    alt="Product 21">
-                <h2>Amul Butter - 300g</h2>
-                <p>₹180.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 22 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1226863_2-akshayakalpa-organic-malai-paneer.jpg?tr=w-828,q=80"
-                    alt="Product 22">
-                <h2>Malai Panner - 100g</h2>
-                <p>₹150.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 23 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/40020214_12-nestle-everyday-dairy-whitener-milk-powder-for-tea.jpg?tr=w-828,q=80"
-                    alt="Product 23">
-                <h2>Milk Powder - 200g</h2>
-                <p>₹120.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 24 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1209579_2-amul-real-ice-cream-vanilla-magic.jpg?tr=w-828,q=80"
-                    alt="Product 24">
-                <h2>Ice Cream - 300g</h2>
-                <p>₹100.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 25 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/40147597_7-heritage-daily-health-toned-milk.jpg?tr=w-828,q=80"
-                    alt="Product 25">
-                <h2>Toned Milk - 1litre</h2>
-                <p>₹140.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="product-grid" id="beverages" data-category="beverages" style="display: none;">
-            <!-- Product 26 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/40216129_10-fresho-tender-coconut-water-no-added-sugar-flavours.jpg?tr=w-1080,q=80"
-                    alt="Product 26">
-                <h2>Coconut Water - 1 Bottle</h2>
-                <p>₹75.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 27 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1204495_2-bru-instant-coffee.jpg?tr=w-1080,q=80"
-                    alt="Product 27">
-                <h2>Instant Coffee - 200g</h2>
-                <p>₹60.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 28 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1207021_1-maaza-mango-drink.jpg?tr=w-1080,q=80"
-                    alt="Product 28">
-                <h2>Mango Drink - 500ml</h2>
-                <p>₹50.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 29 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/1203614_2-thums-up-soft-drink.jpg?tr=w-1080,q=80"
-                    alt="Product 29">
-                <h2>ThumsUp Drink - 500ml</h2>
-                <p>₹50.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-            <!-- Product 30 -->
-            <div class="product-card">
-                <img src="https://www.bigbasket.com/media/uploads/p/m/412110_1-sprite-soft-drink.jpg?tr=w-1080,q=80"
-                    alt="Product 30">
-                <h2>Sprite Drink - 500ml</h2>
-                <p>₹55.0</p>
-                <button class="button-primary add-to-cart-btn">Add to Cart</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="reviews-page">
-        <br>
-        <h1>Customer Reviews</h1><br>
-        <div class="reviews-container">
-            <div class="review-card">
-                <h2>John Doe</h2>
-                <p>★★★★☆</p>
-                <p>Great service and fresh products! Will definitely shop here again.</p>
-            </div>
-            <div class="review-card">
-                <h2>Jane Smith</h2>
-                <p>★★★★★</p>
-                <p>The best grocery store in town! High quality and friendly staff.</p>
-            </div>
-            <div class="review-card">
-                <h2>Emily Johnson</h2>
-                <p>★★★★☆</p>
-                <p>Love the variety and freshness of the products. Highly recommend!</p>
-            </div>
-            <div class="review-card">
-                <h2>Michael Brown</h2>
-                <p>★★★★☆</p>
-                <p>Good prices and excellent customer service. I'll be back for sure.</p>
-            </div>
-        </div>
-    </section>
-
-    <div id="contactus" class="contactus">
-        <br><br><br><h2 class="h1">Contact Us</h2><br><br>
-        <form action="contact.php" id="contact" method="POST">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Send Message">
-            </div><br><br>
-        </form>
+    <div class="h2">
+        <h2 style="font-weight:600; text-align: center;"><span style="color:#ff603c;">15,000+</span> Orders Successfully
+            Served</h2>
     </div>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            <img src="imgs/1.png" alt="img1" class="marquee-item">
+            <img src="imgs/2.png" alt="img2" class="marquee-item">
+            <img src="imgs/3.png" alt="img3" class="marquee-item">
+            <img src="imgs/4.png" alt="img4" class="marquee-item">
+            <img src="imgs/5.png" alt="img5" class="marquee-item">
+            <img src="imgs/6.png" alt="img6" class="marquee-item">
+            <img src="imgs/7.png" alt="img7" class="marquee-item">
+            <img src="imgs/1.png" alt="img1" class="marquee-item">
+            <img src="imgs/2.png" alt="img2" class="marquee-item">
+            <img src="imgs/3.png" alt="img3" class="marquee-item">
+            <img src="imgs/4.png" alt="img4" class="marquee-item">
+            <img src="imgs/5.png" alt="img5" class="marquee-item">
+            <img src="imgs/6.png" alt="img6" class="marquee-item">
+            <img src="imgs/7.png" alt="img7" class="marquee-item">
+        </div>
+    </div>
+
+    <section class="section2">
+        <h3 style="color: blue; font-weight: 700;">EXPERIENCES</h3>
+        <div class="experience-container">
+            <div class="experience-left">
+            <b><p class="h">Serving 10+ <span class="s4">Industries</span><br>from last 8 years</p></b>
+            </div>
+            <div class="experience-right">
+                <p>We are serving 30+ industries and helping them enhance their market presence. We provide authentic and relevant reviews and feedbacks that makes your business stand out.</p>
+            </div>
+        </div>
+
+        <div class="industries">
+            <div class="info">
+                <img src="imgs/DINING AND CAFES.svg" alt="8">
+                <h1>Dining and Cafes</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/FITNESS & SPA.svg" alt="9">
+                <h1>Fitness and Spa</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/LEISURE AND ATTRACTION.svg" alt="10">
+                <h1>Leisure and Attraction (tourism)</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/CONVENIENCE.svg" alt="11">
+                <h1>Convinience</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/FINE DINING AND NIGHTLIFE.svg" alt="12">
+                <h1>Fine Dining and Nightlife</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/FASHION BEAUTY AND GROOMING.svg" alt="13">
+                <h1>Fashion Beauty and Grooming</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/HEALTHCARE PHARMACY.svg" alt="14">
+                <h1>Healthcare / Pharmacy</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/HOTELS.svg" alt="15">
+                <h1>Hotels</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/Retail.svg" alt="16">
+                <h1>Retail</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/REAL ESTATE.svg" alt="17">
+                <h1>Real Estate</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/lo.svg" alt="18">
+                <h1>Logistics</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/business setup and consultncy.svg" alt="19">
+                <h1>Business Setup / Consultancy</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/Rental.svg" alt="20">
+                <h1>Car and Other Rental Services</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/Events.svg" alt="21">
+                <h1>Daily Events</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/househelp.svg" alt="22">
+                <h1>Househelp</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/gifting.svg" alt="23">
+                <h1>Gifting</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/markeitng.svg" alt="24">
+                <h1>Advertising / Printing Agencies</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/buy sell.svg" alt="25">
+                <h1>Automotive Buy / Sell / Insurance / Garage</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/police.png" alt="26">
+                <h1>Police /ambulance / Rta Fines</h1>
+            </div>
+            <div class="info">
+                <img src="imgs/legal.svg" alt="27">
+                <h1>Legal Advisor / Ca</h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="section3">
+        <h3 style="padding: 30px 30px;  color:blue">FAQs</h3>
+
+        <div class="container1">
+            <div class="image-side">
+                <img src="imgs/photo5.png" alt="Description Image">
+            </div>
+            <div class="description-side">
+                <div class="description-text">
+                    <div class="dropdown" onclick="toggleDropdown('dropdownContent1', 'symbol1')">
+                        <h3>Drive Sales <span id="symbol1" class="dropdown-symbol"><i
+                                    class="fas fa-caret-down"></i></span></h3>
+                        <div id="dropdownContent1" class="dropdown-content">
+                            Our Reviews give potential customers the confidence to choose your business over
+                            competitors,
+                            which directly drives more sales and revenue.
+                        </div>
+                    </div>
+
+                    <div class="dropdown" onclick="toggleDropdown('dropdownContent2', 'symbol2')">
+                        <h3>Increase Visibility <span id="symbol2" class="dropdown-symbol"><i
+                                    class="fas fa-caret-down"></i></span></h3>
+                        <div id="dropdownContent2" class="dropdown-content">
+                            With authentic reviews we helps you improve local SEO rankings and make your business stand
+                            out
+                            in search results.
+                        </div>
+                    </div>
+
+                    <div class="dropdown" onclick="toggleDropdown('dropdownContent3', 'symbol3')">
+                        <h3>Create Connections<span id="symbol3" class="dropdown-symbol"><i
+                                    class="fas fa-caret-down"></i></span></h3>
+                        <div id="dropdownContent3" class="dropdown-content">
+                            We just don't provide reviews, We establish meaningful connections and relatiblity which
+                            builds
+                            trust so customers choose you first again and again. </div>
+                    </div>
+
+                    <div class="dropdown" onclick="toggleDropdown('dropdownContent4', 'symbol4')">
+                        <h3>Drive Sales <span id="symbol4" class="dropdown-symbol"><i
+                                    class="fas fa-caret-down"></i></span></h3>
+                        <div id="dropdownContent4" class="dropdown-content">
+                            Our Reviews give potential customers the confidence to choose your business over
+                            competitors,
+                            which directly drives more sales and revenue. </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="text-align: center;  color:black">How it Works ?</h3>
+    <section class="section4">
+
+        <h3 style="  color:blue">STEP:1</h3>
+
+        <div class="container2">
+            <div class="description-side">
+                <p class="ex"><b>Select Package</b></p>
+                <div class="description-text">
+                    <p style="width: 50%; padding-left: 25%;">We offer a variety of different packages to give you the best value for Instagram Likes and Followers. If you have a larger order or would like to discuss a customized plan to suit your needs, don't hesitate to contact us!</p>
+                </div>
+            </div>
+            <div class="image-side">
+                <img src="imgs/photo6.png" alt="Description Image">
+            </div>
+        </div>
+
+
+
+        <h3 style="  color:blue">STEP:2</h3>
+
+        <div class="container2">
+            <div class="image-side">
+                <img src="imgs/photo3.png" alt="Description Image">
+            </div>
+            <div class="description-side">
+                <p class="ex"><b>Enter Your details</b></p><br>
+                <p> <div style="width: 50%; padding-left: 25%;">We never require any sensitive information such as passwords or other secure info in order to deliver your Instagram Followers or Likes. Simply provide us with your Instagram username and your email and we'll get started with your order right away.</p></div>
+            </div>
+        </div>
+
+        <h3 style="  color:blue">STEP:3</h3>
+
+        <div class="container2">
+            <div class="description-side">
+                <p class="ex"><b>See the Magic</b></p>
+                <div class="description-text">
+                    <p style="width: 50%; padding-left: 25%;">After selecting your package and providing account details (your username only), you're already done! Our process is expedited so that it is both fast and easy to provide you with the Likes and Followers you need.</p>
+                </div>
+            </div>
+            <div class="image-side">
+                <img src="imgs/photo4.png" alt="Description Image">
+            </div>
+        </div>
+    </section>
+
+    <section class="section5">
+            <div class="container2">
+                <div class="image-side">
+                    <img src="imgs/photo1.png" alt="Description Image">
+                </div>
+                <div class="description-side">
+                    <p class="ex"><b>About Us</b></p><br>
+                    <p> <div style=" text-align: justify; text-justify: inter-word; line-height: 1.5;">Our review management assures your business makes meaningful connections that drive growth. Let us enhance your reputation and reach more customers through impactful online reviews. Our review management assures your business makes meaningful connections that drive growth. Let us enhance your reputation and reach more customers through impactful online reviews. Our review management assures your business makes meaningful connections that drive growth. Let us enhance your reputation and reach more customers through impactful online reviews.</p></div>
+                    <br><br><br>
+                    <a href="#" class="get-button">Contact US</a>
+                </div>
+    </section>
+
+    <section class="get-started-section">
+        <h1 class="get"><b>Get in Touch with us, and become the most <br>rated buisness around you</b></h1>
+        <a href="#" class="get-started-button">Get Started</a>
+    </section><br>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Grocery Mart. All rights reserved.</p><br>
-            <div class="social-media">
-                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a><br><br>
+            <div class="left-section">
+                <img src="imgs/logo.png" alt="Logo" class="footer-logo">
+                <div class="footer-description">
+                    <h4>BuyingReviews.com</h4>
+                    <p>Your OneStop review solution for your business. Get into the perfect spotlight.</p>
+                </div>
+                <div class="social-media-links">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/20/20673.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="https://i.pinimg.com/originals/45/f4/9e/45f49e05ead9c272c67e821cbda2f49f.jpg"
+                            alt="Instagram">
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <img src="https://seeklogo.com/images/T/twitter-icon-circle-black-logo-35827D553B-seeklogo.com.png"
+                            alt="Twitter">
+                    </a>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#fruits">Fruits</a>
-                <a href="#vegetables">Vegetables</a>
+            <div class="right-section">
+                <div class="quick-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="more-info">
+                    <h4>More Info</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <p class="footer-copyright">© 2024 BuyingReviews.com. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
